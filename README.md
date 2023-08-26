@@ -42,10 +42,11 @@ In summary, this script operationalizes the innovative method presented in the p
 ## How to Use
 
 1. Clone this repository to your local machine.
-2. Ensure you have the required libraries installed (`numpy`, `pandas`, `scipy`).
-3. Replace placeholder functions like `calculate_trust` and `calculate_similarity` with your implementations based on the paper's concepts.
-4. Modify the data source to match your dataset.
-5. Run the script and observe the influenced ratings and recommendation evaluation results.
+2. Create [Virtualenv](https://virtualenv.pypa.io/en/latest/index.html).
+3. Install requirements by command: `pip install -r requirements.txt`.
+4. Replace placeholder functions like `calculate_trust` and `calculate_similarity` with your implementations based on the paper's concepts.
+5. Modify the data source to match your dataset.
+6. Run the script and observe the influenced ratings and recommendation evaluation results.
 
 ## Acknowledgments
 
