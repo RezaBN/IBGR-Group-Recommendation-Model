@@ -1,4 +1,4 @@
-# Group Recommender System with Members’ Influence and Leader Impact
+# IBGR: Influence-Based Group Recommendation Model
 
 This repository contains a Python script that embodies the innovative approach detailed in the research paper "A novel group recommender system based on members’ influence and leader impact" by Reza Barzegar Nozari and Hamidreza Koohi. The paper addresses the intricacies of group recommender systems, which, unlike conventional systems, recommend items simultaneously to a group of individuals sharing common interests, with the aim of satisfying each member. A pivotal challenge in these systems lies in understanding social dynamics and the impact of individual preferences on the group's overall choices. The aim of this project is to explore and practically apply the concepts presented in the paper to build a recommendation system that caters to the preferences and dynamics within a group.
 
