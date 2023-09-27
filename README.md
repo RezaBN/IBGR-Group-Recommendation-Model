@@ -4,11 +4,40 @@ This repository contains a Python script that embodies the innovative approach d
 
 ## Paper Overview
 
-In the paper, the authors propose an innovative approach to group recommender systems, focusing on the influence of individuals on each other within a group. They introduce the concept of "Leaders" who have a significant impact and influence on the preferences of other group members. The paper discusses the use of trust, similarity, and leadership impact to enhance group recommendation outcomes. Additionally, the proposed method is evaluated using real-world data to demonstrate its effectiveness.
+In the paper, the authors propose an innovative approach to group recommender systems, focusing on group creation and the influence of individuals on each other within a group. They introduce the concept of "Leaders" who have a significant impact and influence on the preferences of other group members. The paper discusses the use of trust, similarity, and leadership impact to enhance group recommendation outcomes. Additionally, the proposed method is evaluated using real-world data to demonstrate its effectiveness.
 
-## Script Functionality
+## Scripts Functionality
 
-The script translates the paper's theoretical framework into a functional system, building a recommendation mechanism while meticulously evaluating its performance using a diverse array of metrics. Let's dissect the script's components in relation to the paper's conceptual foundations:
+The scripts `group_creation.py` and `IBGR.py` translate the paper's theoretical framework into a functional system, creating groups and building a recommendation mechanism while meticulously evaluating its performance using a diverse array of metrics. Let's dissect the scripts' components in relation to the paper's conceptual foundations:
+
+### Group Creation (group_creation.py)
+
+1. **read_dataset Function:** 
+   - Reads the user-item dataset in CSV format.
+
+2. **create_user_item_matrix Function:** 
+   - Creates a user-item matrix to represent user-item interactions.
+
+3. **normalize_user_item_matrix Function:** 
+   - Normalizes the user-item matrix using Min-Max scaling.
+
+4. **perform_fuzzy_cmeans_clustering Function:** 
+   - Performs Fuzzy C-Means Clustering on the normalized matrix to group users.
+
+5. **filter_users_by_cluster Function:** 
+   - Filters users by a specified cluster label.
+
+6. **calculate_pcc Function:** 
+   - Calculates Pearson Correlation Coefficient (PCC) between users in the same cluster.
+
+7. **select_top_similar_users Function:** 
+   - Selects a group of top similar users based on PCC values.
+
+8. **main Function:** 
+   - Orchestrates the entire process of group creation, starting from reading the dataset to selecting and saving the group data.
+
+
+### Influence-Based Recommendation (IBGR.py)
 
 1. **Import Statements:**
    - The script starts by importing essential libraries like `numpy` and `pandas` for data handling and analysis, along with `scipy.spatial.distance` for distance calculations, mirroring the methodological toolkit employed in the paper.
@@ -37,16 +66,15 @@ The script translates the paper's theoretical framework into a functional system
 9. **`if __name__ == "__main__":` Block:**
    - This segment mirrors the paper's approach to ensure the `main` function executes autonomously, aligning with the script's role as a standalone application.
 
-In summary, this script operationalizes the innovative method presented in the paper. It implements the proposed group recommendation system, computes influenced ratings, rigorously evaluates recommendation outcomes, and echoes the paper's findings by presenting comprehensive evaluation results.
+In summary, these scripts operationalize the innovative method presented in the paper. They implement the proposed group recommendation system, create groups, compute influenced ratings, rigorously evaluate recommendation outcomes, and echoe the paper's findings by presenting comprehensive evaluation results.
 
 ## How to Use
 
 1. Clone this repository to your local machine.
 2. Create [Virtualenv](https://virtualenv.pypa.io/en/latest/index.html).
 3. Install requirements by command: `pip install -r requirements.txt`.
-4. Replace placeholder functions like `calculate_trust` and `calculate_similarity` with your implementations based on the paper's concepts.
-5. Modify the data source to match your dataset.
-6. Run the script and observe the influenced ratings and recommendation evaluation results.
+5. Modify the parameters in the main functions according to your dataset and preferences.
+6. Run the scripts.
 
 ## Acknowledgments
 
